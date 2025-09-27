@@ -62,7 +62,7 @@ const ColorPicker = ({ color, onColorChange }) => {
         <div className="relative z-10">
           {/* Enhanced Title */}
           <motion.h2 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black bg-gradient-to-r from-gray-800 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-6 sm:mb-8 lg:mb-10 text-center tracking-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black bg-gradient-to-r from-white/90 to-white/60 bg-clip-text text-transparent mb-6 sm:mb-8 lg:mb-10 text-center tracking-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -80,7 +80,7 @@ const ColorPicker = ({ color, onColorChange }) => {
               transition={{ delay: 0.4, duration: 0.8 }}
             >
               <motion.label 
-                className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-700 mb-3 sm:mb-4 lg:mb-6 uppercase tracking-widest"
+                className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white mb-3 sm:mb-4 lg:mb-6 uppercase tracking-widest"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
@@ -169,7 +169,7 @@ const ColorPicker = ({ color, onColorChange }) => {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <motion.h3 
-              className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-8 sm:mb-10 lg:mb-12 text-center"
+              className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-8 sm:mb-10 lg:mb-12 text-center"
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}

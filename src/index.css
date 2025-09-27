@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+/* Color input özel stilleri - border ile renk arasındaki boşluğu kaldırır */
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  outline: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border: none;
+  border-radius: inherit;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-radius: inherit;
+  padding: 0;
+  margin: 0;
+}

@@ -3,59 +3,14 @@ import { motion } from 'framer-motion';
 const Header = () => {
   return (
     <motion.header 
-      className="relative text-center py-16 sm:py-20 lg:py-24 mb-16 sm:mb-20 overflow-hidden -mx-6 sm:-mx-8 lg:-mx-12 xl:-mx-16"
+      className="relative text-center py-20 sm:py-24 lg:py-28 mb-16 sm:mb-20 overflow-hidden -mx-6 sm:-mx-8 lg:-mx-12 xl:-mx-16"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2 }}
     >
-      {/* Enhanced gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700" />
-      <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/30 via-transparent to-orange-400/20" />
+
       
-      {/* Animated mesh gradient overlay */}
-      <motion.div
-        className="absolute inset-0 opacity-40"
-        style={{
-          background: `
-            radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-            radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%)
-          `
-        }}
-        animate={{
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      
-      {/* Floating particles */}
-      <div className="absolute inset-0">
-        {[...Array(12)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white/30 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [-20, -100, -20],
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-              ease: "easeInOut"
-            }}
-          />
-        ))}
-      </div>
+
 
       {/* Animated background shapes */}
       <div className="absolute inset-0">
@@ -193,6 +148,7 @@ const Header = () => {
           ))}
         </motion.div>
       </motion.div>
+
     </motion.header>
   );
 };

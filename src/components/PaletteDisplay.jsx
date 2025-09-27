@@ -51,7 +51,7 @@ const PaletteDisplay = ({ baseColor }) => {
         transition={{ duration: 0.6 }}
       >
         <motion.h2 
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-6 sm:mb-8 tracking-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6 sm:mb-8 tracking-tight"
           initial={{ scale: 0.9 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -59,7 +59,7 @@ const PaletteDisplay = ({ baseColor }) => {
           Renk Paletleriniz
         </motion.h2>
         <motion.p 
-          className="text-lg sm:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4"
+          className="text-lg sm:text-xl lg:text-2xl text-white max-w-4xl mx-auto leading-relaxed px-4"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -135,7 +135,7 @@ const PaletteDisplay = ({ baseColor }) => {
               transition={{ duration: 0.5, delay: 0.8 + (index * 0.15) }}
             >
               <motion.p 
-                className="text-base sm:text-lg lg:text-xl text-gray-600 font-medium bg-white/60 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 rounded-2xl sm:rounded-3xl inline-block shadow-lg border border-white/30"
+                className="text-base sm:text-lg lg:text-xl text-white/90 font-medium bg-white/20 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 rounded-2xl sm:rounded-3xl inline-block shadow-lg border border-white/30"
                 whileHover={{ scale: 1.05, y: -2 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -159,7 +159,7 @@ const PaletteDisplay = ({ baseColor }) => {
           animate={{ scale: 1 }}
           transition={{ duration: 0.6, delay: 1.3 }}
         >
-          💡 Nasıl Kullanılır?
+          Nasıl Kullanılır?
         </motion.h3>
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10"

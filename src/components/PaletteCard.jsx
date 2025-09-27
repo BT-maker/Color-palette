@@ -256,7 +256,7 @@ const PaletteCard = ({ title, colors, icon }) => {
             initial={false}
           />
           <motion.p 
-            className="relative text-sm text-gray-700 font-semibold bg-white/30 backdrop-blur-lg px-6 py-3 rounded-full shadow-xl border border-white/40"
+            className="relative text-sm text-white/90 font-semibold bg-white/20 backdrop-blur-lg px-6 py-3 rounded-full shadow-xl border border-white/40"
             whileHover={{ y: -2 }}
           >
             <motion.span
@@ -273,7 +273,7 @@ const PaletteCard = ({ title, colors, icon }) => {
             >
               👆
             </motion.span>
-            <span className="bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
               Renk kutusuna tıklayarak kopyalayın
             </span>
           </motion.p>
@@ -281,7 +281,7 @@ const PaletteCard = ({ title, colors, icon }) => {
         
         {/* Color count indicator */}
         <motion.div
-          className="mt-4 text-xs text-gray-500 font-medium"
+          className="mt-4 text-xs text-white/70 font-medium"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.5 }}
@@ -294,9 +294,9 @@ const PaletteCard = ({ title, colors, icon }) => {
             {colors.length} renk
           </motion.span>
           {" • "}
-          <span className="text-gray-400">
-            {colorFormat.toUpperCase()} formatında
-          </span>
+          <span className="text-white/60">
+              renk
+            </span>
         </motion.div>
       </motion.div>
     </motion.div>

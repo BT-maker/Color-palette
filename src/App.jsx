@@ -5,15 +5,41 @@ import ColorPicker from './components/ColorPicker';
 import PaletteDisplay from './components/PaletteDisplay';
 
 function App() {
-  const [selectedColor, setSelectedColor] = useState('#3498db');
+  const [selectedColor, setSelectedColor] = useState('#accee6');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50/30 to-pink-50/30 relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Header gradient background for full page */}
+      <div className="fixed inset-0 bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-700" />
+      <div className="fixed inset-0 bg-gradient-to-tr from-blue-600/20 via-transparent to-orange-400/15" />
+      
+      {/* Animated mesh gradient overlay */}
+      <motion.div
+        className="fixed inset-0 opacity-40"
+        style={{
+          background: `
+            radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%)
+          `
+        }}
+        animate={{
+          opacity: [0.3, 0.6, 0.3],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      
+      {/* Content wrapper */}
+      <div className="relative z-10">
       {/* Enhanced background decorative elements */}
       
       {/* Main floating orbs */}
       <motion.div
-        className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-purple-200/20 to-pink-200/20 rounded-full blur-3xl"
+        className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-purple-200/10 to-pink-200/10 rounded-full blur-3xl"
         animate={{ 
           x: [0, 100, 0],
           y: [0, 50, 0],
@@ -26,7 +52,7 @@ function App() {
         }}
       />
       <motion.div
-        className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-blue-200/20 to-indigo-200/20 rounded-full blur-3xl"
+        className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-blue-200/12 to-indigo-200/12 rounded-full blur-3xl"
         animate={{ 
           x: [0, -80, 0],
           y: [0, -60, 0],
@@ -41,7 +67,7 @@ function App() {
       
       {/* Additional floating elements */}
       <motion.div
-        className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-cyan-200/15 to-teal-200/15 rounded-full blur-2xl"
+        className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-cyan-200/8 to-teal-200/8 rounded-full blur-2xl"
         animate={{ 
           x: [0, -50, 0],
           y: [0, 30, 0],
@@ -56,47 +82,6 @@ function App() {
       
       {/* Geometric patterns */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Floating geometric shapes */}
-        <motion.div
-          className="absolute top-20 left-1/3 w-32 h-32 border-2 border-purple-200/30 rounded-3xl"
-          animate={{ 
-            rotate: [0, 360],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{ 
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-32 left-1/4 w-24 h-24 border-2 border-pink-200/30 rounded-full"
-          animate={{ 
-            rotate: [0, -360],
-            x: [0, 20, 0],
-            y: [0, -20, 0]
-          }}
-          transition={{ 
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-1/2 right-20 w-20 h-20 border-2 border-blue-200/30 transform rotate-45"
-          animate={{ 
-            rotate: [45, 405],
-            scale: [1, 1.2, 1]
-          }}
-          transition={{ 
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 opacity-5">
           <div className="w-full h-full" style={{
@@ -197,7 +182,7 @@ function App() {
               transition={{ duration: 0.6, delay: 1.4 }}
             >
               <motion.p 
-                className="text-2xl text-gray-700 mb-4 font-semibold"
+                className="text-2xl text-white/90 mb-4 font-semibold"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1.5 }}
@@ -212,60 +197,16 @@ function App() {
                 <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                   Color Palette Generator
                 </span>
-                <span className="text-gray-700"> ile renk uyumlarını keşfedin!</span>
+                <span className="text-white/90"> ile renk uyumlarını keşfedin!</span>
               </motion.p>
-              <motion.p 
-                className="text-lg text-gray-600 leading-relaxed"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 1.6 }}
-              >
-                React + TailwindCSS + Framer Motion + Chroma.js ile geliştirildi
-              </motion.p>
+                
             </motion.div>
             
-            {/* Tech stack icons */}
-            <motion.div 
-              className="flex justify-center items-center gap-6 mt-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.7 }}
-            >
-              {[
-                { name: 'React', emoji: '⚛️' },
-                { name: 'Tailwind', emoji: '🎨' },
-                { name: 'Framer', emoji: '🎭' },
-                { name: 'Chroma', emoji: '🌈' }
-              ].map((tech, index) => (
-                <motion.div
-                  key={tech.name}
-                  className="flex flex-col items-center p-3 bg-white/60 backdrop-blur-sm rounded-xl shadow-lg border border-white/30"
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ 
-                    duration: 0.4, 
-                    delay: 1.8 + (index * 0.1),
-                    type: "spring",
-                    stiffness: 200
-                  }}
-                  whileHover={{ scale: 1.1, y: -3 }}
-                >
-                  <motion.span 
-                    className="text-2xl mb-1"
-                    whileHover={{ scale: 1.2, rotate: 10 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    {tech.emoji}
-                  </motion.span>
-                  <span className="text-xs font-medium text-gray-600">
-                    {tech.name}
-                  </span>
-                </motion.div>
-              ))}
-            </motion.div>
+            
           </motion.div>
         </motion.footer>
       </motion.div>
+      </div>
     </div>
   );
 }
