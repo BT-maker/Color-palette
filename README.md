@@ -80,13 +80,7 @@ The application supports the following color formats:
 - **RGB** (rgb(255, 87, 51))
 - **HSL** (hsl(9, 100%, 60%))
 
-## 🌟 Demo
 
-Visit the live demo: [Color Palette Generator](https://your-demo-link.com)
-
-## 📸 Screenshots
-
-![Color Palette Generator](https://via.placeholder.com/800x400/6366f1/ffffff?text=Color+Palette+Generator)
 
 ## 🤝 Contributing
 
@@ -98,7 +92,7 @@ Visit the live demo: [Color Palette Generator](https://your-demo-link.com)
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the (LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -106,12 +100,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Framer Motion](https://www.framer.com/motion/) - Animations
 - [TailwindCSS](https://tailwindcss.com/) - Styling
 - [Vite](https://vitejs.dev/) - Build tool
-
-## 📞 Contact
-
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
-
----
 
 ⭐ If you like this project, don't forget to give it a star!
